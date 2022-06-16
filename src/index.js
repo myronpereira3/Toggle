@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {CardProvider}  from './Context/CartContext';
+import { AuthProvider } from './Context/AuthContext';
+import { ThemeProvider } from './Context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+     <ThemeProvider>
+      
+      <AuthProvider>
+        
+     <CardProvider>
     <App />
+    </CardProvider>
+      </AuthProvider>
+      </ThemeProvider>
   </React.StrictMode>
 );
 
